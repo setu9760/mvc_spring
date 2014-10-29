@@ -1,21 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ include file="/WEB-INF/jsp/include.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title><fmt:message key="title" /></title>
+<title>Insert title here</title>
 </head>
 <body>
-	Message:
-	<h3>${msg}</h3>
-	Now:
-	<c:out value=" ${now} " />
-	<p />
-	<c:forEach items="${products} }" var="prods">
-		<c:out value="prods.description" />
-		<i><c:out value="prods.price" /></i>
-	</c:forEach>
+	<h3>Single File Upload</h3>
+	<form method="post" enctype="multipart/form-data" action="singleSave">
+		Upload File: <input type="file" name="file"> <br /> <br />
+		Description: <input type="text" name="desc" /> <br /> <br /> <input
+			type="submit" value="Upload">
+	</form>
 </body>
 </html>
